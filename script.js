@@ -41,10 +41,18 @@ function listPopulate(){
 
 listPopulate();
 
+//restricted, can't add empty values
+function isWhiteSpace(s){
+    var whitespace = s.trim;
+    return whitespace.length > 0;// if this is true it doesn't have whiite spaces
+    
+}
+
 function addTask(){
-    if(inputElement.value){
+    if(inputElement.value && isWhiteSpace(inputElement.value)){
         tasks.push(inputElement.value);
         listPopulate();
+        
     }
 }
 
