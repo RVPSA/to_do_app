@@ -25,3 +25,15 @@ function listPopulate(){
 }
 
 listPopulate();
+
+function addTask(){
+    if(inputElement.value){
+        tasks.push(inputElement.value);
+        listPopulate();
+    }
+}
+
+formElement.addEventListener('submit',function(e){
+    e.preventDefault();
+    addTask();
+});
