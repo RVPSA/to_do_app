@@ -33,6 +33,30 @@ body{
     padding: 2em;
     overflow-y: scroll;
 }
+
+.Delete{
+    cursor: pointer;
+}
+.task ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.task ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.task ul li i{
+    padding: 1em;
+    color: rgb(231, 102, 102);
+}
+.task ul li i:hover{
+    background-color: rgb(233, 209, 209);
+}
+
+
 .input{
     padding: 2em;
     display: flex;
