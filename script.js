@@ -19,7 +19,6 @@ function deleteItem(e){
 
 function listPopulate(){
     listElement.innerHTML='';
-    inputElement.value='';
     tasks.forEach(function(item){
         var newLi = document.createElement("li");
         //add span tag for text
@@ -43,17 +42,19 @@ listPopulate();
 
 //restricted, can't add empty values
 function isWhiteSpace(s){
-    var whitespace = s.trim;
-    return whitespace.length > 0;// if this is true it doesn't have whiite spaces
+    var stringwithoutblank = s.trim();
+    return stringwithoutblank.length > 0;// if this is true it doesn't have whiite spaces
     
 }
 
 function addTask(){
-    if(inputElement.value && isWhiteSpace(inputElement.value)){
+    if(inputElement.value && isWhiteSpace(inputElement.value)
+    && !tasks.includes(inputElement.value)/*check weather alrady in thelist or not*/){
         tasks.push(inputElement.value);
         listPopulate();
         
     }
+    inputElement.value='';
 }
 
 formElement.addEventListener('submit',function(e){
