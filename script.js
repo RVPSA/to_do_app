@@ -5,6 +5,18 @@ var spanElement = document.querySelector("#span1");
 
 var tasks = ['Go to shop','Settle Electricity bill'];
 
+function deleteItem(e){
+    var find = e.target.parentElement.previousElementSibling.innerHTML;
+    //when we press delete button element is 'i', parentelement is 'a' and 
+    //previousElementSibling is 'span'
+    var index = tasks.indexOf(find);//get the inde of that element and delete if 
+    //index value is not equal to -1 that means it's found
+    if(index!==-1){
+        tasks.splice(index,1);
+    }
+    listPopulate();
+}
+
 function listPopulate(){
     listElement.innerHTML='';
     inputElement.value='';
@@ -20,6 +32,7 @@ function listPopulate(){
         anchorEle.classList.add('Delete');//delete class to the html file
         anchorEle.innerHTML='<i class="fa fa-trash" aria-hidden="true"></i>'
         newLi.appendChild(anchorEle);
+        anchorEle.addEventListener('click',(e)=>deleteItem(e))
 
         listElement.appendChild(newLi);
     });
