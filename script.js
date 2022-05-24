@@ -6,6 +6,8 @@ var spanElement = document.querySelector("#span1");
 var tasks = ['Go to shop','Settle Electricity bill'];
 
 function listPopulate(){
+    listElement.innerHTML='';
+    inputElement.value='';
     tasks.forEach(function(item){
         var newLi = document.createElement("li");
         //add span tag for text
