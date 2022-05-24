@@ -40,4 +40,29 @@ body{
 .input input{
     flex-grow: 1;
     outline: none;
+    border: 1px solid #EEE;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 1em;
 }
+.input button{
+    outline: none;
+    border: none;
+    padding: 1em;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #986aaa;
+}
+
+input:hover{
+    border: 1px solid rgb(196, 151, 151);
+}
+input:active{
+    border: 1px solid rgb(74, 97, 171);
+}
+input:focus{
+    border: 1px solid rgb(74, 171, 85);
+}
+
+/*scrollbar*/
+
