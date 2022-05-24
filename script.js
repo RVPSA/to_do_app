@@ -16,10 +16,12 @@ function listPopulate(){
         //add anchor tag for delete
         var anchorEle = document.createElement('a');
         anchorEle.classList.add('Delete');
+        anchorEle.innerHTML='<i class="fa fa-trash" aria-hidden="true"></i>'
         newLi.appendChild(anchorEle);
 
         listElement.appendChild(newLi);
-    })
+    });
+    spanElement.innerHTML = tasks.length;
 }
 
 listPopulate();
