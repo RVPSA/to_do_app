@@ -17,7 +17,7 @@ function listPopulate(){
         
         //add anchor tag for delete
         var anchorEle = document.createElement('a');
-        anchorEle.classList.add('Delete');
+        anchorEle.classList.add('Delete');//delete class to the html file
         anchorEle.innerHTML='<i class="fa fa-trash" aria-hidden="true"></i>'
         newLi.appendChild(anchorEle);
 
