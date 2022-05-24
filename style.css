@@ -22,3 +22,22 @@ body{
     display: flex;
     flex-direction: column;
 }
+
+.todo{
+    padding: 2em;
+    text-align: center;
+    
+}
+.task{
+    flex-grow: 1;
+    padding: 2em;
+    overflow-y: scroll;
+}
+.input{
+    padding: 2em;
+    display: flex;
+}
+.input input{
+    flex-grow: 1;
+    outline: none;
+}
